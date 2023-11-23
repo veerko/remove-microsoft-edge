@@ -13,7 +13,7 @@ if (!(Test-Path "${env:ProgramFiles(x86)}\Microsoft\Edge")){
     pause; exit
 }
 
-# Enable & create system restore point
+# Enable & creates system restore point
 Enable-ComputerRestore -Drive (Get-Location).Drive.Root
 Checkpoint-Computer  -Description "Before RemoveEdge" -RestorePointType "MODIFY_SETTINGS"
 
